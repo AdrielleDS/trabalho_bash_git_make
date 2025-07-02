@@ -1,18 +1,6 @@
-#!/bin/bash
-# testa_primo.sh
-# Este script Bash testa o programa 'primo' com diferentes entradas.
-
-# O '#!' (shebang) no início indica qual interpretador deve ser usado para executar o script.
-# Neste caso, é o '/bin/bash'.
-
 echo "--- Testando o programa primo.cpp ---"
 echo "" # Imprime uma linha em branco para melhor leitura.
 
-# Primeiro, vamos garantir que o programa 'primo' esteja compilado.
-# Usamos 'make primo' para compilar apenas o programa primo.
-# '|| { echo "Erro ao compilar primo.cpp. Verifique seu Makefile e código."; exit 1; }'
-# significa: se o 'make primo' falhar (retornar um código de erro),
-# então imprima a mensagem de erro e saia do script com código de erro 1.
 make primo || { echo "Erro ao compilar primo.cpp. Verifique seu Makefile e código."; exit 1; }
 
 echo "Executando 'primo' com entrada 7 (esperado: Primo)"
