@@ -1,4 +1,4 @@
-Aluna: Adriele Dutra da Silva
+Aluna: Adrielle Dutra da Silva
 
 Como usar:
 
