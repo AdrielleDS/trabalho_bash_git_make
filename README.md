@@ -1,9 +1,8 @@
 Aluna: Adrielle Dutra da Silva
-
 Disciplina: Sistemas de Software Livre
 
 
-#I - Como usar:
+I - COMO USAR:
 
 MAKEFILE:
 Use o Makefile para compilar todos os programas ou individualmente:
@@ -15,29 +14,29 @@ make matriz   # Compila apenas matriz.cpp
 make clean    # Remove os executáveis gerados
 
 
-#II - Execução dos programas
+II - EXECUÇÃO DOS PROGRAMAS
 
 ./primo
 ./vetor
 ./matriz
 
 
-#III - Testes automatizados
+III - TESTES AUTOMATIZADOS
 
 Dar permissão aos scripts
 chmod +x generate-test-*.sh
-
-# Gerar testes
+----------------------------------------------------------------
+1 - Gerar testes
 ./generate-test-primo.sh    # Gera teste1-primo.in
 ./generate-test-vetor.sh    # Gera teste1-vetor.in
 ./generate-test-matriz.sh   # Gera teste1-matriz.in
 
-# Executar com testes
+2 - Executar com testes
 ./primo < teste1-primo.in
 ./vetor < teste1-vetor.in
 ./matriz < teste1-matriz.in
 
-#IV - O que os programas fazem?
+IV - O QUE OS PROGRAMAS FAZEM?
 
 PRIMO.CPP
 
@@ -75,7 +74,7 @@ Exemplo:
 bash
 echo -e "2\n1 2\n3 4\n5 6\n7 8\na" | ./matriz
 
-#V - Exemplos de teste
+V - EXEMPLOS DE TESTE
 
 generate_test_primo.sh
 
@@ -97,7 +96,7 @@ Operação aleatória (a/s/m) (a-adição|s-subtração|m-multipicação)
 Salva em: teste(N)-matriz.in
 
 
-#VI - Dificuldades na implementação
+VI - DIFICULDADES NA IMPLEMENTAÇÃO
 
 
 Eu tive dificuldades quando digitei o comando make pra compilar os arquivos. O terminal acusava erro: Comando "make" não encontrado. E sugeria palavras similares. Então pesquisei o erro e identifiquei que meu Lixux da máquina virtual não tinha esse pacote instalado. 
