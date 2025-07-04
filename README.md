@@ -1,4 +1,4 @@
-Aluna: Adrielle Dutra da Silva
+Aluna: Adrielle Dutra da Silva  
 Disciplina: Sistemas de Software Livre  
 
 I - COMO USAR:
@@ -7,13 +7,13 @@ MAKEFILE:
 Use o Makefile para compilar todos os programas ou individualmente:
 
 make         # Compila todos os programas
-```bash
+
 make primo   # Compila apenas primo.cpp
-```bash
+
 make vetor   # Compila apenas vetor.cpp
-```bash
+
 make matriz  # Compila apenas matriz.cpp
-```bash
+
 make clean   # Remove os executáveis gerados
 
 II - EXECUÇÃO DOS PROGRAMAS
@@ -33,48 +33,40 @@ chmod +x generate-test-primo.sh
 chmod +x generate-test-vetor.sh
 chmod +x generate-test-matriz.sh
 
-1 - Gerar testes
-
-Para gerar os arquivos de entrada para os testes:
+1 - Para gerar os arquivos de entrada para os testes:
 
 ./generate-test-primo.sh   # Gera teste1-primo.in
 ./generate-test-vetor.sh   # Gera teste1-vetor.in
 ./generate-test-matriz.sh  # Gera teste1-matriz.in
 
-2 - Executar com testes
-
-Para executar os programas usando os arquivos de teste gerados:
+2 - Para executar os programas usando os arquivos de teste gerados:
 
 ./primo < teste1-primo.in
 ./vetor < teste1-vetor.in
 ./matriz < teste1-matriz.in
 
 IV - O QUE OS PROGRAMAS FAZEM?
-PRIMO.CPP
+
+primo.cpp
 
 Função: Verifica se um número é primo
 Entrada: Um número inteiro via stdin
 Saída: "Primo" ou "Não é primo"
 
-Exemplo:
-
-echo 7 | ./primo
-
-VETOR.CPP
+Exemplo: echo 7 | ./primo
+---------------------------------------------
+vetor.cpp
 
 Função: Encontra o maior valor em um vetor
 Entrada:
-
     Primeiro: tamanho do vetor (n)
-
     Depois: n números inteiros (um por linha)
     Saída: O maior número do vetor
 
-Exemplo:
+Exemplo: echo -e "3\n5\n1\n9" | ./vetor
+--------------------------------------------
 
-echo -e "3\n5\n1\n9" | ./vetor
-
-MATRIZ.CPP
+matriz.cpp
 
 Função: Calculadora de matrizes (soma, subtração e multiplicação)
 Entrada (interativa, via menu):
@@ -91,15 +83,17 @@ Entrada (interativa, via menu):
     Saída: Matriz resultante
 
 Exemplo (Soma de duas matrizes 2x2, depois sai):
-
 echo -e "1\n2\n2\n1\n2\n3\n4\n2\n2\n5\n6\n7\n8\n4" | ./matriz
 
+
 V - EXEMPLOS DE TESTE
+
 generate_test_primo.sh
 
     Gera um número aleatório entre 1 e 1000
 
     Salva em: teste(N)-primo.in
+
 
 generate_test_vetor.sh
 
@@ -108,6 +102,7 @@ generate_test_vetor.sh
     Elementos aleatórios (0-1000)
 
     Salva em: teste(N)-vetor.in
+
 
 generate_test_matriz.sh
 
@@ -118,12 +113,17 @@ generate_test_matriz.sh
     Operação aleatória (1-soma|2-subtração|3-multiplicação)
 
     Salva em: teste(N)-matriz.in
+    
 
 VI - DIFICULDADES NA IMPLEMENTAÇÃO
 
-Eu tive dificuldades quando digitei o comando make para compilar os arquivos. O terminal acusava erro: Comando "make" não encontrado. E sugeria palavras similares. Então pesquisei o erro e identifiquei que meu Linux da máquina virtual não tinha esse pacote instalado.
-Usei o comando sudo apt update inicialmente. Demorou quase 1h para atualizar. Daí reiniciei a máquina virtual e tentei novamente usar o comando make. Sem sucesso.
-Então achei o comando sudo apt install build-essential. Atualizou outras coisas e depois deu erro que não foi possível instalar alguns pacotes.
+Eu tive dificuldades quando digitei o comando make para compilar os arquivos. 
+O terminal acusava erro: Comando "make" não encontrado. E sugeria palavras similares. 
+Então pesquisei o erro e identifiquei que meu Linux da máquina virtual não tinha esse pacote instalado.
+Usei o comando sudo apt update inicialmente. Demorou quase 1h para atualizar. 
+Daí reiniciei a máquina virtual e tentei novamente usar o comando make. Sem sucesso.
+Então achei o comando sudo apt install build-essential. 
+Atualizou outras coisas e depois deu erro que não foi possível instalar alguns pacotes.
 Depois tentei o comando sudo dnf install make, não funcionou também.
 Por fim, depois de forçar a atualização, o make foi instalado.
 Também tive dificuldades com o comando nano, na hora de salvar o arquivo editado e submeter.
