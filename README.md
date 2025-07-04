@@ -1,96 +1,100 @@
-Aluna: Adrielle Dutra da Silva  
+Aluna: Adrielle Dutra da Silva
 Disciplina: Sistemas de Software Livre  
 
-# Meu Projeto C++ usando bash, git e make    
+I - COMO USAR:
+MAKEFILE:
 
-Este repositório contém os exercícios de C++:  
-- Programa Primo  
-- Programa Vetor  
-- Calculadora de Matrizes  
-Cada programa tem seu próprio arquivo .cpp e scripts de teste.  
+Use o Makefile para compilar todos os programas ou individualmente:
 
-I - COMO USAR:  
+make         # Compila todos os programas
+```bash
+make primo   # Compila apenas primo.cpp
+```bash
+make vetor   # Compila apenas vetor.cpp
+```bash
+make matriz  # Compila apenas matriz.cpp
+```bash
+make clean   # Remove os executáveis gerados
 
-MAKEFILE:  
+II - EXECUÇÃO DOS PROGRAMAS
 
-Use o Makefile para compilar todos os programas ou individualmente:  
+Para executar os programas (após compilá-los com make):
 
-make         # Compila todos os programas  
-make primo   # Compila apenas primo.cpp  
-make vetor   # Compila apenas vetor.cpp  
-make matriz  # Compila apenas matriz.cpp  
-make clean   # Remove os executáveis gerados  
+./primo
+./vetor
+./matriz
 
+III - TESTES AUTOMATIZADOS
+Dar permissão aos scripts
 
-II - EXECUÇÃO DOS PROGRAMAS  
+Antes de executar os scripts de teste, você precisa dar permissão de execução a eles:
 
-./primo  
-./vetor  
-./matriz  
+chmod +x generate-test-primo.sh
+chmod +x generate-test-vetor.sh
+chmod +x generate-test-matriz.sh
 
+1 - Gerar testes
 
-III - TESTES AUTOMATIZADOS  
-Dar permissão aos scripts  
+Para gerar os arquivos de entrada para os testes:
 
-Antes de executar os scripts de teste, você precisa dar permissão de execução a eles:  
+./generate-test-primo.sh   # Gera teste1-primo.in
+./generate-test-vetor.sh   # Gera teste1-vetor.in
+./generate-test-matriz.sh  # Gera teste1-matriz.in
 
-1 - Gerar testes  
+2 - Executar com testes
 
-Para gerar os arquivos de entrada para os testes:  
+Para executar os programas usando os arquivos de teste gerados:
 
-chmod +x generate-test-primo.sh  
-chmod +x generate-test-vetor.sh  
-chmod +x generate-test-matriz.sh  
+./primo < teste1-primo.in
+./vetor < teste1-vetor.in
+./matriz < teste1-matriz.in
 
-2 - Executar com testes  
+IV - O QUE OS PROGRAMAS FAZEM?
+PRIMO.CPP
 
-Para executar os programas usando os arquivos de teste gerados:  
+Função: Verifica se um número é primo
+Entrada: Um número inteiro via stdin
+Saída: "Primo" ou "Não é primo"
 
-./primo < teste1-primo.in  
-./vetor < teste1-vetor.in  
-./matriz < teste1-matriz.in  
+Exemplo:
 
+echo 7 | ./primo
 
-IV - O QUE OS PROGRAMAS FAZEM?  
+VETOR.CPP
 
-PRIMO.CPP  
+Função: Encontra o maior valor em um vetor
+Entrada:
 
-Função: Verifica se um número é primo  
-Entrada: Um número inteiro via stdin  
-Saída: "Primo" ou "Não é primo"  
+    Primeiro: tamanho do vetor (n)
 
-Exemplo:  
+    Depois: n números inteiros (um por linha)
+    Saída: O maior número do vetor
 
-echo 7 | ./primo  
----------------------------------------------
-VETOR.CPP  
+Exemplo:
 
-Função: Encontra o maior valor em um vetor  
-Entrada:  
-Primeiro: tamanho do vetor (n)  
-Depois: n números inteiros  
-Saída: O maior número do vetor  
+echo -e "3\n5\n1\n9" | ./vetor
 
-Exemplo:  
+MATRIZ.CPP
 
-echo -e "3\n5 1 9" | ./vetor  
----------------------------------------------
-MATRIZ.CPP  
+Função: Calculadora de matrizes (soma, subtração e multiplicação)
+Entrada (interativa, via menu):
 
-Função: Calculadora de matrizes (soma, subtração e multiplicação)  
-Entrada:  
-Tamanho da matriz (n)  
-Matriz 1 (n×n)  
-Matriz 2 (n×n)  
-Operação ('a' para soma, 's' para subtração, 'm' para multiplicação)  
-Saída: Matriz resultante  
+    Opção de operação (1 para soma, 2 para subtração, 3 para multiplicação, 4 para sair)
 
-Exemplo:  
+    Tamanho da Matriz 1 (linhas e colunas)
 
-echo -e "2\n1 2\n3 4\n5 6\n7 8\na" | ./matriz  
+    Elementos da Matriz 1 (um por linha)
 
-V - EXEMPLOS DE TESTE  
+    Tamanho da Matriz 2 (linhas e colunas)
 
+    Elementos da Matriz 2 (um por linha)
+    Saída: Matriz resultante
+
+Exemplo (Soma de duas matrizes 2x2, depois sai):
+
+echo -e "1\n2\n2\n1\n2\n3\n4\n2\n2\n5\n6\n7\n8\n4" | ./matriz
+
+V - EXEMPLOS DE TESTE
 generate_test_primo.sh
 
     Gera um número aleatório entre 1 e 1000
@@ -115,15 +119,11 @@ generate_test_matriz.sh
 
     Salva em: teste(N)-matriz.in
 
-VI - DIFICULDADES NA IMPLEMENTAÇÃO  
+VI - DIFICULDADES NA IMPLEMENTAÇÃO
 
-
-Eu tive dificuldades quando digitei o comando make pra compilar os arquivos. O terminal acusava erro: Comando "make" não encontrado. E sugeria palavras similares.  
-Então pesquisei o erro e identifiquei que meu Lixux da máquina virtual não tinha esse pacote instalado. 
-Usei o comando sudo apt update inicialmente. Demorou quase 1h pra atualizar. Dai reiniciei a máquina virtual e tentei novamente usar o comando make. Sem sucesso.
+Eu tive dificuldades quando digitei o comando make para compilar os arquivos. O terminal acusava erro: Comando "make" não encontrado. E sugeria palavras similares. Então pesquisei o erro e identifiquei que meu Linux da máquina virtual não tinha esse pacote instalado.
+Usei o comando sudo apt update inicialmente. Demorou quase 1h para atualizar. Daí reiniciei a máquina virtual e tentei novamente usar o comando make. Sem sucesso.
 Então achei o comando sudo apt install build-essential. Atualizou outras coisas e depois deu erro que não foi possível instalar alguns pacotes.
 Depois tentei o comando sudo dnf install make, não funcionou também.
-
-Por fim depois de forçar a atualização, foi instalado. 
-
+Por fim, depois de forçar a atualização, o make foi instalado.
 Também tive dificuldades com o comando nano, na hora de salvar o arquivo editado e submeter.
