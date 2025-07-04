@@ -24,14 +24,17 @@ II - EXECUÇÃO DOS PROGRAMAS
 III - TESTES AUTOMATIZADOS
 
 Dar permissão aos scripts
+
 chmod +x generate-test-*.sh
 ----------------------------------------------------------------
 1 - Gerar testes
+
 ./generate-test-primo.sh    # Gera teste1-primo.in
 ./generate-test-vetor.sh    # Gera teste1-vetor.in
 ./generate-test-matriz.sh   # Gera teste1-matriz.in
 
 2 - Executar com testes
+
 ./primo < teste1-primo.in
 ./vetor < teste1-vetor.in
 ./matriz < teste1-matriz.in
@@ -56,7 +59,9 @@ Primeiro: tamanho do vetor (n)
 Depois: n números inteiros
 Saída: O maior número do vetor
 
+
 Exemplo:
+
 bash
 echo -e "3\n5 1 9" | ./vetor
 ---------------------------------------------
@@ -71,6 +76,7 @@ Operação ('a' para soma, 's' para subtração, 'm' para multiplicação)
 Saída: Matriz resultante
 
 Exemplo:
+
 bash
 echo -e "2\n1 2\n3 4\n5 6\n7 8\na" | ./matriz
 
