@@ -60,7 +60,7 @@ Entrada: Um número inteiro via stdin
 Saída: "Primo" ou "Não é primo"  
 
 Exemplo:  
-bash  
+
 echo 7 | ./primo  
 ---------------------------------------------
 VETOR.CPP  
@@ -73,7 +73,6 @@ Saída: O maior número do vetor
 
 Exemplo:  
 
-bash  
 echo -e "3\n5 1 9" | ./vetor  
 ---------------------------------------------
 MATRIZ.CPP  
@@ -88,30 +87,33 @@ Saída: Matriz resultante
 
 Exemplo:  
 
-bash  
 echo -e "2\n1 2\n3 4\n5 6\n7 8\na" | ./matriz  
 
 V - EXEMPLOS DE TESTE  
 
-generate_test_primo.sh  
+generate_test_primo.sh
 
-Gera um número aleatório entre 1 e 1000   
-Salva em: teste(N)-primo.in  
----------------------------------------------------------------
-generate_test_vetor_sh  
+    Gera um número aleatório entre 1 e 1000
 
-Gera um tamanho aleatório do vetor (1-100)  
-Elementos aleatórios (0-1000)  
-Salva em: teste(N)-vetor.in  
----------------------------------------------------------------
-generate_test_matriz_sh  
+    Salva em: teste(N)-primo.in
 
-Gera um tamanho aleatório da matriz (1-100)  
-Duas matrizes com valores 0-1000 (Sendo N o tamanho das matrizes,   
-coloque N*N valores para cada Matriz)  
-Operação aleatória (a/s/m) (a-adição|s-subtração|m-multipicação)  
-Salva em: teste(N)-matriz.in  
+generate_test_vetor.sh
 
+    Gera um tamanho aleatório do vetor (1-100)
+
+    Elementos aleatórios (0-1000)
+
+    Salva em: teste(N)-vetor.in
+
+generate_test_matriz.sh
+
+    Gera um tamanho aleatório da matriz (1-100)
+
+    Duas matrizes com valores 0-1000 (Sendo N o tamanho das matrizes, coloque N*N valores para cada Matriz)
+
+    Operação aleatória (1-soma|2-subtração|3-multiplicação)
+
+    Salva em: teste(N)-matriz.in
 
 VI - DIFICULDADES NA IMPLEMENTAÇÃO  
 
