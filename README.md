@@ -1,9 +1,12 @@
-Aluna: Adrielle Dutra da Silva  
-Disciplina: Sistemas de Software Livre  
+**Aluna:** Adrielle Dutra da Silva  
+**Disciplina:** Sistemas de Software Livre  
 
 
 
-I - COMO USAR O MAKEFILE:  
+
+
+**I - COMO USAR O MAKEFILE:**  
+
 
 Use o Makefile para compilar todos os programas ou individualmente:  
 
@@ -19,17 +22,24 @@ make clean    # Remove os executáveis gerados
 
 
 
-II - EXECUÇÃO DOS PROGRAMAS  
+
+
+**II - EXECUÇÃO DOS PROGRAMAS**  
+
 
 Para executar os programas (após compilá-los com make):  
-
 
 ./primo  
 ./vetor  
 ./matriz
 
 
-III - TESTES AUTOMATIZADOS  
+
+
+
+**III - TESTES AUTOMATIZADOS**  
+
+
 Dar permissão aos scripts  
 Antes de executar os scripts de teste, você precisa dar permissão de execução a eles:  
 
@@ -38,15 +48,14 @@ chmod +x generate-test-vetor.sh
 chmod +x generate-test-matriz.sh  
 
 
-1 - Para gerar os arquivos de entrada para os testes:  
+*1 - Para gerar os arquivos de entrada para os testes:*  
 
 ./generate-test-primo.sh   # Gera teste1-primo.in  
 ./generate-test-vetor.sh   # Gera teste1-vetor.in  
 ./generate-test-matriz.sh  # Gera teste1-matriz.in  
 
 
-
-2 - Para executar os programas usando os arquivos de teste gerados:  
+*2 - Para executar os programas usando os arquivos de teste gerados:*  
 
 ./primo < teste1-primo.in  
 ./vetor < teste1-vetor.in  
@@ -54,10 +63,12 @@ chmod +x generate-test-matriz.sh
 
 
 
-IV - O QUE OS PROGRAMAS FAZEM?  
+
+**IV - O QUE OS PROGRAMAS FAZEM?**  
 
 
-primo.cpp  
+
+*primo.cpp*  
 
 Função: Verifica se um número é primo  
 Entrada: Um número inteiro via stdin  
@@ -67,7 +78,7 @@ Exemplo: echo 7 | ./primo
 
 
 ---------------------------------------------
-vetor.cpp  
+*vetor.cpp*  
 
 Função: Encontra o maior valor em um vetor  
 Entrada:  
@@ -79,7 +90,7 @@ Exemplo: echo -e "3\n5\n1\n9" | ./vetor
 
 
 --------------------------------------------
-matriz.cpp  
+*matriz.cpp*  
 
 Função: Calculadora de matrizes (soma, subtração e multiplicação)  
 Entrada (interativa, via menu):  
@@ -102,7 +113,7 @@ echo -e "1\n2\n2\n1\n2\n3\n4\n2\n2\n5\n6\n7\n8\n4" | ./matriz
 
 
 
-V - EXEMPLOS DE TESTE
+**V - EXEMPLOS DE TESTE**
 
 generate_test_primo.sh
 
@@ -133,7 +144,9 @@ generate_test_matriz.sh
 
 
 
-VI - DIFICULDADES NA IMPLEMENTAÇÃO
+
+
+**VI - DIFICULDADES NA IMPLEMENTAÇÃO**
 
 Eu tive dificuldades quando digitei o comando make para compilar os arquivos.   
 O terminal acusava erro: Comando "make" não encontrado. E sugeria palavras similares.   
