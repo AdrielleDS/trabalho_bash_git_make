@@ -1,10 +1,7 @@
-Aluna: Adrielle Dutra da Silva
-Disciplina: Sistemas de Software Livre
+Aluna: Adrielle Dutra da Silva  Disciplina: Sistemas de Software Livre
 
 
-I - COMO USAR:
-
-MAKEFILE:
+I - COMO USAR:  MAKEFILE:
 
 Use o Makefile para compilar todos os programas ou individualmente:
 
