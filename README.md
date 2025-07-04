@@ -22,10 +22,9 @@ II - EXECUÇÃO DOS PROGRAMAS
 ./matriz
 
 
-III - TESTES AUTOMATIZADOS
+III - TESTES AUTOMATIZADOS  
 
-Dar permissão aos scripts
-
+Dar permissão aos scripts  
 chmod +x generate-test-*.sh
 ----------------------------------------------------------------
 1 - Gerar testes
@@ -48,7 +47,7 @@ Função: Verifica se um número é primo
 Entrada: Um número inteiro via stdin
 Saída: "Primo" ou "Não é primo"
 
-Exemplo:
+Exemplo:  
 bash
 echo 7 | ./primo
 ---------------------------------------------
@@ -60,8 +59,7 @@ Primeiro: tamanho do vetor (n)
 Depois: n números inteiros
 Saída: O maior número do vetor
 
-
-Exemplo:
+Exemplo:  
 
 bash
 echo -e "3\n5 1 9" | ./vetor
@@ -76,25 +74,25 @@ Matriz 2 (n×n)
 Operação ('a' para soma, 's' para subtração, 'm' para multiplicação)
 Saída: Matriz resultante
 
-Exemplo:
+Exemplo:  
 
 bash
 echo -e "2\n1 2\n3 4\n5 6\n7 8\na" | ./matriz
 
 V - EXEMPLOS DE TESTE
 
-generate_test_primo.sh
+generate_test_primo.sh  
 
 Gera um número aleatório entre 1 e 1000 
 Salva em: teste(N)-primo.in
 ---------------------------------------------------------------
-generate_test_vetor_sh
+generate_test_vetor_sh  
 
 Gera um tamanho aleatório do vetor (1-100)
 Elementos aleatórios (0-1000)
 Salva em: teste(N)-vetor.in
 ---------------------------------------------------------------
-generate_test_matriz_sh
+generate_test_matriz_sh  
 
 Gera um tamanho aleatório da matriz (1-100
 Duas matrizes com valores 0-1000 (Sendo N o tamanho das matrizes, 
