@@ -1,15 +1,18 @@
-Aluna: Adrielle Dutra da Silva  Disciplina: Sistemas de Software Livre
+Aluna: Adrielle Dutra da Silva  
+Disciplina: Sistemas de Software Livre
 
 
-I - COMO USAR:  MAKEFILE:
+I - COMO USAR:  
+
+MAKEFILE:
 
 Use o Makefile para compilar todos os programas ou individualmente:
 
-make         # Compila todos os programas
-make primo   # Compila apenas primo.cpp
-make vetor   # Compila apenas vetor.cpp
-make matriz  # Compila apenas matriz.cpp
-make clean   # Remove os executáveis gerados
+make         # Compila todos os programas  
+make primo   # Compila apenas primo.cpp  
+make vetor   # Compila apenas vetor.cpp  
+make matriz  # Compila apenas matriz.cpp  
+make clean   # Remove os executáveis gerados  
 
 
 II - EXECUÇÃO DOS PROGRAMAS
