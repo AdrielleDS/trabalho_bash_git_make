@@ -1,5 +1,9 @@
 Aluna: Adrielle Dutra da Silva
+<<<<<<< HEAD
 Disciplina: Sistemas de Software Livre
+=======
+
+>>>>>>> fc3caf0494ddd627762887cff874591863369afd
 Como usar:
 
 MAKEFILE:
@@ -29,5 +33,3 @@ Então achei o comando sudo apt install build-essential. Atualizou outras coisas
 Depois tentei o comando sudo dnf install make, não funcionou também.
 
 Por fim depois de forçar a atualização, foi instalado. 
-
-

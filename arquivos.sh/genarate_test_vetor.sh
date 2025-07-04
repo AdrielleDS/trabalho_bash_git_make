@@ -1,7 +1,3 @@
-#!/bin/bash
-# testa_vetor.sh
-# Este script Bash testa o programa 'vetor' com diferentes entradas.
-
 echo "--- Testando o programa vetor.cpp ---"
 echo ""
 
